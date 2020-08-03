@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
        //webView.loadUrl("https://js-qr-test.herokuapp.com/");
        //webView.loadUrl("https://webcamtests.com/check");
-
+        webView.loadUrl("https://portal-pirates.herokuapp.com/");
         webView.getSettings().setBuiltInZoomControls(true);
         webView.getSettings().setDisplayZoomControls(false);
         //webView.getSettings().setAllowFileAccess(true);
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
              @Override
              public void onPermissionRequest(final PermissionRequest request) {
-                 if (Build.VERSION.SDK_INT != Build.VERSION_CODES.M) {
+                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                      Log.i(TAG, "onPermissionRequest");
                      if (checkSelfPermission(Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
 
